@@ -1,0 +1,26 @@
+# Ignore artifacts and cache
+artifacts/
+cache/
+*.log
+
+# Ignore compiled contracts (Remix or Hardhat)
+*.abi
+*.bin
+
+# Ignore deployment files from Remix IDE
+*.json
+*.db
+
+# Ignore Hardhat stuff
+typechain/
+coverage/
+coverage.json
+.env
+.env.local
+
+# Node.js dependencies
+node_modules/
+
+# OS-specific
+.DS_Store
+Thumbs.db
