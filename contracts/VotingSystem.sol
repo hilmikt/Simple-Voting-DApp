@@ -51,4 +51,20 @@ contract VotingSystem {
         candidatesCount++;
     }
 
+    // @dev Event fired when someone casts a vote
+    event Voted(address voter, uint candidateId);
+
+    /// @notice Vote for a candidate by ID
+    /// @param _candidateId ID of the candidate in the mapping
+    function cote(uint _candidateId) public {
+        require(!votingEnded, "Voting has ended");
+        require(!hasVoted[msg.sender], "You have already voted");
+        require(_candidateId < candidatesCount, "Invalid candidate");
+
+        candidates[_candidateId].voteCount++;
+        hasVoted[msg.sender] = true;
+
+        emit Voted(msg.sender, _candidateId);
+    }
+
 }
