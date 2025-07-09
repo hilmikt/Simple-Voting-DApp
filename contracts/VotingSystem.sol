@@ -67,4 +67,14 @@ contract VotingSystem {
         emit Voted(msg.sender, _candidateId);
     }
 
+    // @dev Event fired when the admin ends the election
+    event VotingEnded();
+
+    /// @notice Ends the voting session (admin only)
+    function endVoting() public onlyOwner {
+        require(!votingEnded, "Voting already ended");
+        votingEnded = true;
+        emit VotingEnded();
+    }
+
 }
