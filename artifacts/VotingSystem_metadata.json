@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "candidatesCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "votingEnded",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Hilmi KT",
+			"kind": "dev",
+			"methods": {},
+			"title": "Simple Voting System",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "This contract allows decentralized voting with admin-controlled setup",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/VotingSystem.sol": "VotingSystem"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/VotingSystem.sol": {
+			"keccak256": "0x9f912275be6d89d7800e035ccfd4b5c5b4a6fe63618c3ae2a744f88f692de5f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://01491c97ae3ab3ccca428ee2f65791232de4168a538dcfb0c9c4e6ea56ee7fa1",
+				"dweb:/ipfs/QmZJRp7PFwimn6SohQxxvdpji9F49DsL3k89MuHP87Rjm2"
+			]
+		}
+	},
+	"version": 1
+}
