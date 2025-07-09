@@ -26,4 +26,16 @@ contract VotingSystem {
         _;
     }
 
+    // @dev Structure to hold candidate data
+    struct Candidate {
+        string name;
+        uint voteCount;
+    }
+
+    //@dev Mapping from candidate ID to Candidate struct
+    mapping(uint => Candidate) public candidates;
+
+    //@dev Mapping to track whether an address has votes
+    mapping(address => bool) public hasVoted;
+
 }
