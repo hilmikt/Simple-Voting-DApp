@@ -77,4 +77,14 @@ contract VotingSystem {
         emit VotingEnded();
     }
 
+    /// @notice Returns candidate details
+    /// @param _id ID of the candidate
+    /// @return name Candidate name
+    /// @return voteCount Total votes received
+    function getCandidate(uint _id) public view returns (string memory, uint) {
+        require(_id < candidatesCount, "Invalid candidate ID");
+        Candidate memory c = candidates[_id];
+        return (c.name, c.voteCount);
+    }
+
 }
