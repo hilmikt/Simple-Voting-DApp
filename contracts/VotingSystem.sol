@@ -32,10 +32,23 @@ contract VotingSystem {
         uint voteCount;
     }
 
-    //@dev Mapping from candidate ID to Candidate struct
+    // @dev Mapping from candidate ID to Candidate struct
     mapping(uint => Candidate) public candidates;
 
-    //@dev Mapping to track whether an address has votes
+    // @dev Mapping to track whether an address has votes
     mapping(address => bool) public hasVoted;
+
+    // @dev Event fired when new candidate is added
+    event CandidateAdded(string name, uint id);
+
+    /// @notice Add a candidate to the election (admin only)
+    /// @param _name Name of the candidate
+    function addCandidate(string memory _name) public onlyOwner {
+        require(!votingEnded, "Voting has ended");
+
+        candidates[candidatesCount] = Candidate(_name, 0);
+        emit CandidateAdded(_name, candidatesCount);
+        candidatesCount++;
+    }
 
 }
