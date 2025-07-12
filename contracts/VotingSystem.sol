@@ -56,7 +56,7 @@ contract VotingSystem {
 
     /// @notice Vote for a candidate by ID
     /// @param _candidateId ID of the candidate in the mapping
-    function cote(uint _candidateId) public {
+    function vote(uint _candidateId) public {
         require(!votingEnded, "Voting has ended");
         require(!hasVoted[msg.sender], "You have already voted");
         require(_candidateId < candidatesCount, "Invalid candidate");
